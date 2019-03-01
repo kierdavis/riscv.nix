@@ -26,5 +26,8 @@ in
       url = "git://github.com/riscv/riscv-gnu-toolchain.git";
       sha256 = "16w4nn6gni5n5i2dbb31w4fw2mbahmg4j199drpvpl6mzwydws7j";
     };
+    patches = [
+      patches/riscv-gnu-toolchain-gcc-empty-string-check.patch
+    ];
     buildFlags = ["DISTDIR=${distdir}"];
   }
